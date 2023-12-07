@@ -11,6 +11,35 @@ import Testimonials from "../components/testimonials";
 import Cta from "../components/cta";
 import Faq from "../components/faq";
 import PopupWidget from "../components/popupWidget";
+import Container from "../components/container";
+
+import { useEffect } from "react";
+
+const HubspotContactForm = () => {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://js.hsforms.net/forms/v2.js";
+    document.body.appendChild(script);
+
+    script.addEventListener("load", () => {
+      // @TS-ignore
+      if (window.hbspt) {
+        // @TS-ignore
+        window.hbspt.forms.create({
+          portalId: "7684074",
+          formId: "c72f1669-6505-4b23-85bb-392410eacf4f",
+          target: "#hubspotForm",
+        });
+      }
+    });
+  }, []);
+
+  return (
+    <div className="p-4">
+      <div id="hubspotForm"></div>
+    </div>
+  );
+};
 
 const Home = () => {
   return (
@@ -20,13 +49,16 @@ const Home = () => {
         <meta name="description" content="Nextly is a free landing page template built with next.js & Tailwind CSS" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <Navbar />
       <Hero />
-      <SectionTitle pretitle="Nextly Benefits" title=" Why should you use this landing page">
-        Nextly is a free landing page & marketing website template for startups and indie projects. Its built with
-        Next.js & TailwindCSS. And its completely open-source.
+      <SectionTitle title="Contact Us!">
+        Are you interested in joining the league or learning more about it? Fill out the form below and we'll get in
+        contact!
       </SectionTitle>
+      <Container>
+        <HubspotContactForm />
+      </Container>
+      {/*
       <Benefits data={benefitOne} />
       <Benefits imgPos="right" data={benefitTwo} />
       <SectionTitle pretitle="Watch a video" title="Learn how to fullfil your needs">
@@ -38,15 +70,14 @@ const Home = () => {
         Testimonails is a great way to increase the brand trust and awareness. Use this section to highlight your
         popular customers.
       </SectionTitle>
-      <Testimonials />
+      <Testimonials /> */}
       <SectionTitle pretitle="FAQ" title="Frequently Asked Questions">
         Answer your customers possible questions here, it will increase the conversion rate as well as support or chat
         requests.
       </SectionTitle>
       <Faq />
-      <Cta />
-      <Footer />
-      <PopupWidget />
+      {/* <Cta /> */}
+      {/* <Footer /> */}
     </div>
   );
 };
