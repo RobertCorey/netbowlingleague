@@ -50,7 +50,7 @@ const Home = () => {
       <div id="getstarted">
         <SectionTitle title="Contact Us!">
           Are you interested in joining the league or learning more about it? Fill out the form below and we'll get in
-          contact!
+          contact! Or you can show up at Needham Bowlaway on Thursdays at 7:30pm and ask for the league.
         </SectionTitle>
         <Container>
           <HubspotContactForm />
