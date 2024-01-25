@@ -15,6 +15,18 @@ const Hero = () => {
               The N.E.T Bowling league is a casual social candlepin bowling league that meets at Needham Bowlaway on
               thursdays.
             </p>
+            <ul className="space-y-2">
+              <li>
+                <a href="#getstarted" className="text-blue-500 hover:text-blue-700">
+                  Get Started
+                </a>
+              </li>
+              <li>
+                <a href="#learnmore" className="text-blue-500 hover:text-blue-700">
+                  Learn More
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
         <div className="flex items-center justify-center w-full lg:w-1/2">
@@ -31,31 +43,6 @@ const Hero = () => {
           </div>
         </div>
       </Container>
-      {/* <Container>
-        <div className="flex flex-col justify-center">
-          <div className="text-xl text-center text-gray-700 dark:text-white">
-            Trusted by <span className="text-teal-600">2000+</span> customers worldwide
-          </div>
-
-          <div className="flex flex-wrap justify-center gap-5 mt-10 md:justify-around">
-            <div className="pt-2 text-gray-400 dark:text-gray-400">
-              <AmazonLogo />
-            </div>
-            <div className="text-gray-400 dark:text-gray-400">
-              <VerizonLogo />
-            </div>
-            <div className="text-gray-400 dark:text-gray-400">
-              <MicrosoftLogo />
-            </div>
-            <div className="pt-1 text-gray-400 dark:text-gray-400">
-              <NetflixLogo />
-            </div>
-            <div className="pt-2 text-gray-400 dark:text-gray-400">
-              <SonyLogo />
-            </div>
-          </div>
-        </div>
-      </Container> */}
     </>
   );
 };
