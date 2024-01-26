@@ -5,6 +5,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider attribute="class" defaultTheme="light">
       <Component {...pageProps} />
+      <Analytics />
     </ThemeProvider>
   );
 }
